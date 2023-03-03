@@ -338,7 +338,7 @@ Use this command to create a {{site.data.keyword.messagehub_full}} target to be 
     {: important}
 
 `--type TARGET_TYPE`
-:   Set the `TARGET_TYPE` to `event_streams` for an Event Streams target.
+:   Set the `TARGET_TYPE` to `event_streams` for an {{site.data.keyword.messagehub}} target.
 
 `--file @EVENTSTREAMS_ENDPOINT_DEFINITION_JSON_FILE`
 :   A file containing an endpoint definition in the following format:
@@ -357,13 +357,13 @@ Use this command to create a {{site.data.keyword.messagehub_full}} target to be 
 :   The CRN of the {{site.data.keyword.messagehub_full}} instance. You can get the source crn from the service credentials.
 
 `--brokers BROKER_LIST`
-:   The list of Event Streams brokers (endpoints). This is the value of the `kafka_brokers_sasl` in the service credentials.
+:   The list of {{site.data.keyword.messagehub}} brokers (endpoints). This is the value of the `kafka_brokers_sasl` in the service credentials.
 
 `--topic TOPIC`
-:   Event Streams topic name to where the events are sent. This is the name of the topic created for an Event streams instance
+:   {{site.data.keyword.messagehub}} topic name to where the events are sent. This is the name of the topic created for an {{site.data.keyword.messagehub}} instance.
 
 `--api-key EVENTSTREAMS_API_KEY` | `@EVENTSTREAMS_API_KEY_FILE`
-:   The password value found in the Event Streams service credential. This is the IAM API key
+:   The password value found in the {{site.data.keyword.messagehub}} service credential. This is the IAM API key.
 
 `--output FORMAT`
 :   Currently supported format is JSON. If specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.
@@ -502,7 +502,7 @@ ibmcloud atracker target update --target TARGET [--name TARGET_NAME] ( --file @L
 ## ibmcloud atracker target update (Event Streams)
 {: #target-update-cli-ies}
 
-Use this command to update an Event Streams target for an {{site.data.keyword.atracker_full_notm}} region.  Any specified value that is different from when the target was originally created will be updated to the value specified in the command.
+Use this command to update an {{site.data.keyword.messagehub}} target for an {{site.data.keyword.atracker_full_notm}} region.  Any specified value that is different from when the target was originally created will be updated to the value specified in the command.
 
 ```sh
 ibmcloud atracker target update --target TARGET [--name TARGET_NAME] [ [--file EVENTSTREAMS_ENDPOINT_DEFINITION_JSON_FILE] | ( [--brokers BROKER_LIST] [--target-crn EVENTSTREAMS_TARGET_CRN] [--topic TOPIC]( [--api-key ( EVENTSTREAMS_API_KEY | @EVENTSTREAMS_API_KEY_FILE )]))] [--output FORMAT]
@@ -541,13 +541,13 @@ ibmcloud atracker target update --target TARGET [--name TARGET_NAME] [ [--file E
 :   The CRN of the {{site.data.keyword.messagehub_full}} instance. You can get the source crn from the service credentials.
 
 `--brokers BROKER_LIST`
-:   The list of Event Streams brokers (endpoints). This is the value of the `kafka_brokers_sasl` in the service credentials.
+:   The list of {{site.data.keyword.messagehub}} brokers (endpoints). This is the value of the `kafka_brokers_sasl` in the service credentials.
 
 `--topic TOPIC`
-:   Event Streams topic name to where the events are sent. This is the name of the topic created for an Event streams instance
+:   {{site.data.keyword.messagehub}} topic name to where the events are sent. This is the name of the topic created for an {{site.data.keyword.messagehub}} instance.
 
 `--api-key EVENTSTREAMS_API_KEY` | `@EVENTSTREAMS_API_KEY_FILE`
-:   The password value found in the Event Streams service credential. This is the IAM API key
+:   The password value found in the {{site.data.keyword.messagehub}} service credential. This is the IAM API key.
 
 `--output FORMAT`
 :   Currently supported format is JSON. If specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.
