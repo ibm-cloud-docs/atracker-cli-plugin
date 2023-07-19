@@ -2,7 +2,7 @@
 
 copyright:
   years:  2021, 2023
-lastupdated: "2022-08-12"
+lastupdated: "2023-07-17"
 
 subcollection: atracker-cli-plugin
 
@@ -20,12 +20,6 @@ The {{site.data.keyword.cloud}} command-line interface (CLI) provides extra capa
 
 This information applies only if you use an {{site.data.keyword.at_full}} [Event Routing offering](/docs/atracker?topic=atracker-getting-started). See the [command line references for {{site.data.keyword.at_full}} hosted event search](/docs/activity-tracker-cli-plugin?topic=activity-tracker-cli-plugin-activity-tracker-cli-overview) for the CLI for that offering.
 {: important}
-
-{{site.data.keyword.atracker_full_notm}} has two unique CLIs depending on the version of the CLI you are running:
-
-* {{site.data.keyword.at_full}} [Event Routing offering V1 CLI](/docs/atracker-cli-plugin?topic=atracker-cli-plugin-atracker-v1-cli)
-
-* {{site.data.keyword.at_full}} [Event Routing offering V2 CLI](/docs/atracker-cli-plugin?topic=atracker-cli-plugin-atracker-v2-cli)
 
 ## Installing the CLI
 {: #at_install_cli}

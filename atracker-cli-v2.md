@@ -2,7 +2,7 @@
 
 copyright:
   years:  2021, 2023
-lastupdated: "2022-08-12"
+lastupdated: "2023-07-17"
 
 subcollection: atracker-cli-plugin
 
@@ -11,10 +11,10 @@ keywords: IBM Cloud Activity Tracker Event Routing CLI, IBM Cloud Activity Track
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Activity Tracker Event Routing V2 CLI
+# Activity Tracker Event Routing CLI
 {: #atracker-v2-cli}
 
-The {{site.data.keyword.cloud}} command-line interface (CLI) provides extra capabilities for service offerings. This information describes how you can use the CLI to define and manage settings for your {{site.data.keyword.atracker_full}} instance using the V2 CLI.
+The {{site.data.keyword.cloud}} command-line interface (CLI) provides extra capabilities for service offerings. This information describes how you can use the CLI to define and manage settings for your {{site.data.keyword.atracker_full}} instance using the CLI.
 {: shortdesc}
 
 This information applies only if you use an {{site.data.keyword.at_full}} [Event Routing offering](/docs/atracker?topic=atracker-getting-started). See the [command line references for {{site.data.keyword.at_full}} hosted event search](/docs/activity-tracker-cli-plugin?topic=activity-tracker-cli-plugin-activity-tracker-cli) for the CLI for that offering.
