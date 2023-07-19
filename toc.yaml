@@ -9,13 +9,11 @@ toc:
     path: atracker-cli-plugin
     label: IBM Cloud Activity Tracker Event Routing CLI
 
-  entries: 
-  - navgroup: 
+  entries:
+  - navgroup:
       id: reference
-      topics: 
+      topics:
       - topic: atracker-cli-overview.md
         navtitle: Overview
-      - topic: atracker-cli-v1.md
-        navtitle: V1 CLI reference
       - topic: atracker-cli-v2.md
-        navtitle: v2 CLI reference
+        navtitle: CLI reference
