@@ -369,8 +369,7 @@ Use this command to create a {{site.data.keyword.messagehub_full}} target to be 
 :   Currently supported format is JSON. If specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.
 
 `help` | `--help` | `-h`
-:   List options available for the command.## ibmcloud atracker target create (COS)
-{: #target-create-cli-ies}
+:   List options available for the command.## ibmcloud atracker target create (COS).
 
 Use this command to create a {{site.data.keyword.messagehub_full}} target to be used to configure a destination for activity events.
 
