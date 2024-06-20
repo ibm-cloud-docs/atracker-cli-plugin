@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2021, 2023
-lastupdated: "2023-07-17"
+  years:  2021, 2023, 2024
+lastupdated: "2024-06-03"
 
 subcollection: atracker-cli-plugin
 
@@ -222,7 +222,7 @@ Use this command to create a {{site.data.keyword.cos_full_notm}} target to be us
 {: #target-create-options-v2-cos}
 
 `--region REGION` | `-r REGION`
-:   Name of the region, for example, `us-south` or `eu-gb`. If not specified, the region logged into, or targeted, will be used.
+:   Name of the region that determines the {{site.data.keyword.atracker_full_notm}} API endpoint for the request, for example, `us-south` or `eu-gb`. If not specified, the region logged into, or targeted, will be used.
 
 `--name TARGET_NAME`
 :   The name to be given to the target.
@@ -281,7 +281,7 @@ ibmcloud atracker target create --name TARGET_NAME --type TARGET_TYPE ( [--file 
 {: #target-create-v2-options-at}
 
 `--region REGION` | `-r REGION`
-:   Name of the region, for example, `us-south` or `eu-gb`. If not specified, the region logged into, or targeted, will be used.
+:   Name of the region that determines the {{site.data.keyword.atracker_full_notm}} API endpoint for the request, for example, `us-south` or `eu-gb`. If not specified, the region logged into, or targeted, will be used.
 
 `--name TARGET_NAME`
 :   The name to be given to the target.
@@ -329,7 +329,7 @@ Use this command to create a {{site.data.keyword.messagehub_full}} target to be 
 {: #target-create-options-ies}
 
 `--region REGION` | `-r REGION`
-:   Name of the region, for example, `us-south` or `eu-gb`. If not specified, the region logged into, or targeted, will be used.
+:   Name of the region that determines the {{site.data.keyword.atracker_full_notm}} API endpoint for the request, for example, `us-south` or `eu-gb`. If not specified, the region logged into, or targeted, will be used.
 
 `--name TARGET_NAME`
 :   The name to be given to the target.
@@ -378,6 +378,57 @@ Use this command to create a {{site.data.keyword.messagehub_full}} target to be 
 ```
 {: pre}
 
+## ibmcloud atracker target create ({{site.data.keyword.logs_full_notm}})
+{: #target-create-cli-icl}
+
+Use this command to create a {{site.data.keyword.messagehub_full}} target to be used to configure a destination for activity events.
+
+```sh
+ ibmcloud atracker target create --name TARGET_NAME --type TARGET_TYPE ( [--file CLOUD_LOGS_ENDPOINT_DEFINITION_JSON_FILE] | ( [--target-crn CLOUD_LOGS_TARGET_CRN] ) ) [--region REGION] [--output FORMAT]
+```
+{: pre}
+
+### Command options
+{: #target-create-options-icl}
+
+`--region REGION` | `-r REGION`
+:   Name of the region that determines the {{site.data.keyword.atracker_full_notm}} API endpoint for the request, for example, `us-south` or `eu-gb`. If not specified, the region logged into, or targeted, will be used.
+
+`--name TARGET_NAME`
+:   The name to be given to the target.
+
+    Do not include any personal identifying information (PII) in any resource names.
+    {: important}
+
+`--type TARGET_TYPE`
+:   Set the `TARGET_TYPE` to `cloud_logs` for an {{site.data.keyword.logs_full_notm}} target.
+
+`--file @CLOUD_LOGS_ENDPOINT_DEFINITION_JSON_FILE`
+:   A file containing an endpoint definition in the following format:
+
+    ```json
+    {
+      "target_crn": "yyyyy"
+    }
+    ```
+    {: codeblock}
+
+`--target-crn CLOUD_LOGS_TARGET_CRN`
+:   The CRN of the {{site.data.keyword.logs_full_notm}} instance.
+
+`--output FORMAT`
+:   Currently supported format is JSON. If specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.
+
+`help` | `--help` | `-h`
+:   List options available for the command.## ibmcloud atracker target create.
+
+Use this command to create a {{site.data.keyword.logs_full_notm}} target to be used to configure a destination for activity events.
+
+```sh
+ ibmcloud atracker target create --name new-target-name --type cloud-logs --target-crn "crn:v1:bluemix:public:logs:eu-de:a/11111111111111111111111111111111:22222222-2222-2222-2222-222222222222::"
+```
+{: pre}
+
 ## ibmcloud atracker target update (COS)
 {: #target-update-v2-cli-cos}
 
@@ -393,9 +444,6 @@ ibmcloud atracker target update --target TARGET [--name TARGET_NAME] [ [--file C
 
 `--target TARGET`
 :   The ID or current target name.
-
-`--region REGION` | `-r REGION`
-:   Name of the region, for example, `us-south` or `eu-gb`. If not specified, the region logged into, or targeted, will be used.
 
 `--name TARGET_NAME`
 :   The name to be given to the target.
@@ -456,7 +504,7 @@ ibmcloud atracker target update --target TARGET [--name TARGET_NAME] [ [--file C
 Use this command to update an {{site.data.keyword.at_full_notm}} hosted event search offering target to be used to configure a destination for activity events.
 
 ```sh
-ibmcloud atracker target update --target TARGET [--name TARGET_NAME] ( --file @LOGDNA_ENDPOINT_DEFINITION_JSON_FILE ) | (--target-crn LOGDNA_TARGET_CRN --ingestion-key LOGDNA_INGESTION_KEY )  [--region REGION] [--output FORMAT]
+ibmcloud atracker target update --target TARGET [--name TARGET_NAME] ( --file @LOGDNA_ENDPOINT_DEFINITION_JSON_FILE ) | (--target-crn LOGDNA_TARGET_CRN --ingestion-key LOGDNA_INGESTION_KEY )  [--output FORMAT]
 ```
 {: pre}
 
@@ -465,9 +513,6 @@ ibmcloud atracker target update --target TARGET [--name TARGET_NAME] ( --file @L
 
 `--target TARGET`
 :   The ID or current target name.
-
-`--region REGION` | `-r REGION`
-:   Name of the region, for example, `us-south` or `eu-gb`. If not specified, the region logged into, or targeted, will be used.
 
 `--name TARGET_NAME`
 :   The name to be given to the target.
@@ -511,9 +556,6 @@ ibmcloud atracker target update --target TARGET [--name TARGET_NAME] [ [--file E
 ### Command options
 {: #target-update-options-ies}
 
-`--region REGION` | `-r REGION`
-:   Name of the region, for example, `us-south` or `eu-gb`. If not specified, the region logged into, or targeted, will be used.
-
 `--name TARGET_NAME`
 :   The name to be given to the target.
 
@@ -554,6 +596,46 @@ ibmcloud atracker target update --target TARGET [--name TARGET_NAME] [ [--file E
 `help` | `--help` | `-h`
 :   List options available for the command.
 
+## ibmcloud atracker target update ({{site.data.keyword.logs_full_notm}})
+{: #target-update-cli-icl}
+
+Use this command to update an {{site.data.keyword.logs_full_notm}} target to be used to configure a destination for activity events.
+
+```sh
+ibmcloud atracker target update --target TARGET [--name TARGET_NAME] ( --file @CLOUD_LOGS_ENDPOINT_DEFINITION_JSON_FILE ) | (--target-crn CLOUD_LOGS_TARGET_CRN) [--output FORMAT]
+```
+{: pre}
+
+### Command options
+{: #target-update-options-icl}
+
+`--target TARGET`
+:   The ID or current target name.
+
+`--name TARGET_NAME`
+:   The name to be given to the target.
+
+    Do not include any personal identifying information (PII) in any resource names.
+    {: important}
+
+`--file @CLOUD_LOGS_ENDPOINT_DEFINITION_JSON_FILE`
+:   A file containing an endpoint definition in the following format:
+
+    ```json
+    {
+      "target_crn": "yyyyy",
+    }
+    ```
+    {: codeblock}
+
+`--target-crn CLOUD_LOGS_TARGET_CRN`
+:   The CRN of the {{site.data.keyword.logs_full_notm}} instance.
+
+`--output FORMAT`
+:   Currently support format is JSON. If specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.
+
+`help` | `--help` | `-h`
+:   List options available for the command.
 
 ## ibmcloud atracker target rm
 {: #target-delete-v2-cli}
@@ -594,7 +676,7 @@ ibmcloud atracker target validate --target TARGET [--region REGION] [--output FO
 :   The ID or name of the target.
 
 `--region REGION` | `-r REGION`
-:   Name of the region, for example, `us-south` or `eu-gb`. If not specified, the region logged into, or targeted, will be used.
+:   Name of the region that determines the {{site.data.keyword.atracker_full_notm}} API endpoint for the request, for example, `us-south` or `eu-gb`. If not specified, the region logged into, or targeted, will be used.
 
 `--output FORMAT`
 :   Currently supported format is JSON. If specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.
