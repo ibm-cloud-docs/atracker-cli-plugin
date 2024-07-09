@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years:  2021, 2023
-lastupdated: "2023-07-17"
+  years:  2021, 2024
+lastupdated: "2024-07-09"
 
 subcollection: atracker-cli-plugin
 
-keywords: IBM Cloud Activity Tracker Event Routing CLI, IBM Cloud Activity Tracker Event Routing command line, IBM Cloud Activity Tracker Event Routing terminal, IBM Cloud Activity Tracker Event Routing shell
+keywords: 
 
 ---
 
