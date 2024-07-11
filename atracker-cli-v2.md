@@ -2,7 +2,7 @@
 
 copyright:
   years:  2021, 2024
-lastupdated: "2024-07-09"
+lastupdated: "2024-07-11"
 
 subcollection: atracker-cli-plugin
 
@@ -35,7 +35,7 @@ This information applies only if you use an {{site.data.keyword.at_full}} [Event
 You're notified on the command line when updates to the {{site.data.keyword.cloud_notm}} CLI and plug-ins are available. Be sure to keep your CLI up to date so that you can use the latest commands. You can view the current version of all installed plug-ins by running `ibmcloud plugin list`.
 {: tip}
 
-## ibmcloud atracker route create
+## `ibmcloud atracker route create`
 {: #route-create-v2-cli}
 
 Use this command to create a new route for an {{site.data.keyword.atracker_short}} target.
@@ -87,7 +87,7 @@ ibmcloud atracker route create --name ROUTE_NAME  ( --target-ids TARGETS  [--loc
 `help` | `--help` | `-h`
 :   List options available for the command.
 
-## ibmcloud atracker route update
+## `ibmcloud atracker route update`
 {: #route-update-v2-cli}
 
 
@@ -146,7 +146,7 @@ ibmcloud atracker route update --route ROUTE [--name ROUTE_NAME] [--force] ( [--
 `help` | `--help` | `-h`
 :   List options available for the command.
 
-## ibmcloud atracker route rm
+## `ibmcloud atracker route rm`
 {: #route-delete-v2-cli}
 
 Use this command to delete an {{site.data.keyword.atracker_short}} route.
@@ -168,7 +168,7 @@ ibmcloud atracker route rm --route ROUTE [--force]
 `help` | `--help` | `-h`
 :   List options available for the command.
 
-## ibmcloud atracker route get
+## `ibmcloud atracker route get`
 {: #route-view-v2-cli}
 
 Use this command to get information about an {{site.data.keyword.atracker_short}} route.
@@ -190,7 +190,7 @@ ibmcloud atracker route get --route ROUTE [--output FORMAT]
 `help` | `--help` | `-h`
 :   List options available for the command.
 
-## ibmcloud atracker route ls
+## `ibmcloud atracker route ls`
 {: #route-list-v2-cli}
 
 Use this command to list all the configured routes for {{site.data.keyword.atracker_short}} .
@@ -209,7 +209,7 @@ ibmcloud atracker route ls [--output FORMAT]
 `help` | `--help` | `-h`
 :   List options available for the command.
 
-## ibmcloud atracker target create (COS)
+## `ibmcloud atracker target create` (COS)
 {: #target-create-cli-v2-cos}
 
 Use this command to create a {{site.data.keyword.cos_full_notm}} target to be used to configure a destination for activity events.
@@ -268,7 +268,7 @@ Use this command to create a {{site.data.keyword.cos_full_notm}} target to be us
 `help` | `--help` | `-h`
 :   List options available for the command.
 
-## ibmcloud atracker target create ({{site.data.keyword.at_full_notm}} hosted event search)
+## `ibmcloud atracker target create` ({{site.data.keyword.at_full_notm}} hosted event search)
 {: #target-create-v2-cli-at}
 
 Use this command to create an {{site.data.keyword.at_full_notm}} hosted event search offering target to be used to configure a destination for activity events.
@@ -316,7 +316,7 @@ ibmcloud atracker target create --name TARGET_NAME --type TARGET_TYPE ( [--file 
 `help` | `--help` | `-h`
 :   List options available for the command.
 
-## ibmcloud atracker target create (Event Streams)
+## `ibmcloud atracker target create` (Event Streams)
 {: #target-create-cli-ies}
 
 Use this command to create a {{site.data.keyword.messagehub_full}} target to be used to configure a destination for activity events.
@@ -379,7 +379,7 @@ Use this command to create a {{site.data.keyword.messagehub_full}} target to be 
 ```
 {: pre}
 
-## ibmcloud atracker target create ({{site.data.keyword.logs_full_notm}})
+## `ibmcloud atracker target create` ({{site.data.keyword.logs_full_notm}})
 {: #target-create-cli-icl}
 
 Use this command to create a {{site.data.keyword.messagehub_full}} target to be used to configure a destination for activity events.
@@ -430,7 +430,7 @@ Use this command to create a {{site.data.keyword.logs_full_notm}} target to be u
 ```
 {: pre}
 
-## ibmcloud atracker target update (COS)
+## `ibmcloud atracker target update` (COS)
 {: #target-update-v2-cli-cos}
 
 Use this command to update a COS target for an {{site.data.keyword.atracker_full_notm}} region.  Any specified value that is different from when the target was originally created will be updated to the value specified in the command.
@@ -499,7 +499,7 @@ ibmcloud atracker target update --target TARGET [--name TARGET_NAME] [ [--file C
 `help` | `--help` | `-h`
 :   List options available for the command.
 
-## ibmcloud atracker target update ({{site.data.keyword.at_full_notm}} hosted event search)
+## `ibmcloud atracker target update` ({{site.data.keyword.at_full_notm}} hosted event search)
 {: #target-update-v2-cli-at}
 
 Use this command to update an {{site.data.keyword.at_full_notm}} hosted event search offering target to be used to configure a destination for activity events.
@@ -544,7 +544,7 @@ ibmcloud atracker target update --target TARGET [--name TARGET_NAME] ( --file @L
 `help` | `--help` | `-h`
 :   List options available for the command.
 
-## ibmcloud atracker target update (Event Streams)
+## `ibmcloud atracker target update` (Event Streams)
 {: #target-update-cli-ies}
 
 Use this command to update an {{site.data.keyword.messagehub}} target for an {{site.data.keyword.atracker_full_notm}} region.  Any specified value that is different from when the target was originally created will be updated to the value specified in the command.
@@ -597,7 +597,7 @@ ibmcloud atracker target update --target TARGET [--name TARGET_NAME] [ [--file E
 `help` | `--help` | `-h`
 :   List options available for the command.
 
-## ibmcloud atracker target update ({{site.data.keyword.logs_full_notm}})
+## `ibmcloud atracker target update` ({{site.data.keyword.logs_full_notm}})
 {: #target-update-cli-icl}
 
 Use this command to update an {{site.data.keyword.logs_full_notm}} target to be used to configure a destination for activity events.
@@ -638,7 +638,7 @@ ibmcloud atracker target update --target TARGET [--name TARGET_NAME] ( --file @C
 `help` | `--help` | `-h`
 :   List options available for the command.
 
-## ibmcloud atracker target rm
+## `ibmcloud atracker target rm`
 {: #target-delete-v2-cli}
 
 Use this command to delete a target.
@@ -660,7 +660,7 @@ ibmcloud atracker target rm --target TARGET [--force]
 `help` | `--help` | `-h`
 :   List options available for the command.
 
-## ibmcloud atracker target validate
+## `ibmcloud atracker target validate`
 {: #target-validate-v2-cli}
 
 Use this command to validate that a target is correctly configured for an {{site.data.keyword.atracker_full_notm}} region.
@@ -685,7 +685,7 @@ ibmcloud atracker target validate --target TARGET [--region REGION] [--output FO
 `help` | `--help` | `-h`
 :   List options available for the command.
 
-## ibmcloud atracker target get
+## `ibmcloud atracker target get`
 {: #target-get-v2-cli-cos}
 
 Use this command to get information about a target for an {{site.data.keyword.atracker_full_notm}} region.
@@ -707,7 +707,7 @@ ibmcloud atracker target get --target TARGET [--output FORMAT]
 `help` | `--help` | `-h`
 :   List options available for the command.
 
-## ibmcloud atracker target ls
+## `ibmcloud atracker target ls`
 {: #target-list-v2-cli-cos}
 
 Use this command to list the configured targets for an {{site.data.keyword.atracker_full_notm}} region.
@@ -726,7 +726,7 @@ ibmcloud atracker target ls [--output FORMAT]
 `help` | `--help` | `-h`
 :   List options available for the command.
 
-## ibmcloud atracker setting get
+## `ibmcloud atracker setting get`
 {: #settings-get-v2-cli}
 
 Use this command to get the settings for the {{site.data.keyword.atracker_full_notm}} account configurations.
@@ -745,7 +745,7 @@ ibmcloud atracker setting get [--output FORMAT]
 `help` | `--help` | `-h`
 :   List options available for the command.
 
-## ibmcloud atracker setting update
+## `ibmcloud atracker setting update`
 {: #settings-update-v2-cli}
 
 Use this command to modify current settings such as the default targets, permitted target regions, primary and secondary metadata regions in {{site.data.keyword.atracker_full_notm}}. Any value that is different from when the target was originally created will be updated to the value specified in the command.
@@ -782,7 +782,7 @@ ibmcloud atracker setting update [--metadata-region-primary REGION] [--metadata-
  `help` | `--help` | `-h`
 :   List options available for the command.
 
-## ibmcloud atracker migration start
+## `ibmcloud atracker migration start`
 {: #migration-post-v2-cli}
 
 Use this command to migrate all targets and routes for an IBM account from a V1 API configuration to a V2 API configuration.
@@ -792,7 +792,7 @@ ibmcloud atracker migration start
 ```
 {: pre}
 
-## ibmcloud atracker migration status
+## `ibmcloud atracker migration status`
 {: #migration-get-v2-cli}
 
 Use this command to get the status of an in-progress migration.
