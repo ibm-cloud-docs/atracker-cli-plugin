@@ -2,7 +2,7 @@
 
 copyright:
   years:  2021, 2024
-lastupdated: "2024-07-11"
+lastupdated: "2024-07-22"
 
 subcollection: atracker-cli-plugin
 
@@ -782,22 +782,3 @@ ibmcloud atracker setting update [--metadata-region-primary REGION] [--metadata-
  `help` | `--help` | `-h`
 :   List options available for the command.
 
-## `ibmcloud atracker migration start`
-{: #migration-post-v2-cli}
-
-Use this command to migrate all targets and routes for an IBM account from a V1 API configuration to a V2 API configuration.
-
-```sh
-ibmcloud atracker migration start
-```
-{: pre}
-
-## `ibmcloud atracker migration status`
-{: #migration-get-v2-cli}
-
-Use this command to get the status of an in-progress migration.
-
-```sh
-ibmcloud atracker migration status
-```
-{: pre}
