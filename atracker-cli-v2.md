@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2021, 2024
-lastupdated: "2024-07-22"
+  years:  2021, 2025
+lastupdated: "2025-02-22"
 
 subcollection: atracker-cli-plugin
 
@@ -260,7 +260,7 @@ Use this command to create a {{site.data.keyword.cos_full_notm}} target to be us
 :   Your [API key](/docs/account?topic=account-manapikey) value or a reference to the API Key file used to gain access.  For example, `ibmcloud login --apikey $KEYFILE`
 
 `--service-to-service-enabled`
-:   Indicates if [service-to-service authorization](#cos_s2s) has been enabled for the bucket.  Specify `TRUE` if service-to-service authorization is enabled and `FALSE` if service-to-service authorization is not enable.  By default, `service_to_service_enabled` is `FALSE`.
+:   Indicates if [service-to-service authorization](/docs/atracker?topic=atracker-iam-service-auth-cos&interface=ui) has been enabled for the bucket.  Specify `TRUE` if service-to-service authorization is enabled and `FALSE` if service-to-service authorization is not enable.  By default, `service_to_service_enabled` is `FALSE`.
 
 `--output FORMAT`
 :   Currently supported format is JSON. If specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.
@@ -322,7 +322,7 @@ ibmcloud atracker target create --name TARGET_NAME --type TARGET_TYPE ( [--file 
 Use this command to create a {{site.data.keyword.messagehub_full}} target to be used to configure a destination for activity events.
 
 ```sh
- ibmcloud atracker target create --name TARGET_NAME --type TARGET_TYPE ( [--file EVENTSTREAMS_ENDPOINT_DEFINITION_JSON_FILE] | ( [--target-crn EVENTSTREAMS_TARGET_CRN] [--brokers BROKER_LIST] [--topic TOPIC] [--api-key ( EVENTSTREAMS_API_KEY | @EVENTSTREAMS_API_KEY_FILE )] ) ) [--region REGION] [--output FORMAT]
+ ibmcloud atracker target create --name TARGET_NAME --type TARGET_TYPE ( [--file EVENTSTREAMS_ENDPOINT_DEFINITION_JSON_FILE] | ( [--target-crn EVENTSTREAMS_TARGET_CRN] [--brokers BROKER_LIST] [--topic TOPIC] [--api-key ( EVENTSTREAMS_API_KEY | @EVENTSTREAMS_API_KEY_FILE )] | [--service-to-service-enabled ( TRUE | FALSE )]) ) [--region REGION] [--output FORMAT]
 ```
 {: pre}
 
@@ -365,6 +365,9 @@ Use this command to create a {{site.data.keyword.messagehub_full}} target to be 
 
 `--api-key EVENTSTREAMS_API_KEY` | `@EVENTSTREAMS_API_KEY_FILE`
 :   The password value found in the {{site.data.keyword.messagehub}} service credential. This is the IAM API key.
+
+`--service-to-service-enabled`
+:   Determines if {{site.data.keyword.atracker_full_notm}} has service to service authentication enabled. Set this flag to `true` if service to service is enabled and do not supply an apikey.
 
 `--output FORMAT`
 :   Currently supported format is JSON. If specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.
@@ -491,7 +494,7 @@ ibmcloud atracker target update --target TARGET [--name TARGET_NAME] [ [--file C
 :   Your [API key](/docs/account?topic=account-manapikey) value or a reference to the API Key file used to gain access.  For example, `ibmcloud login --apikey $KEYFILE`
 
 `--service-to-service-enabled (TRUE | FALSE)`
-:   Indicates if [service-to-service authorization](#cos_s2s) has been enabled for the bucket.  Specify `TRUE` if service-to-service authorization is enabled and `FALSE` if service-to-service authorization is not enable.  By default, service-to-service authorization is `FALSE`.
+:   Indicates if [service-to-service authorization](/docs/atracker?topic=atracker-iam-service-auth-cos&interface=ui) has been enabled for the bucket.  Specify `TRUE` if service-to-service authorization is enabled and `FALSE` if service-to-service authorization is not enable.  By default, service-to-service authorization is `FALSE`.
 
 `--output FORMAT`
 :   Currently supported format is JSON. If specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.
@@ -549,8 +552,8 @@ ibmcloud atracker target update --target TARGET [--name TARGET_NAME] ( --file @L
 
 Use this command to update an {{site.data.keyword.messagehub}} target for an {{site.data.keyword.atracker_full_notm}} region.  Any specified value that is different from when the target was originally created will be updated to the value specified in the command.
 
-```sh
-ibmcloud atracker target update --target TARGET [--name TARGET_NAME] [ [--file EVENTSTREAMS_ENDPOINT_DEFINITION_JSON_FILE] | ( [--brokers BROKER_LIST] [--target-crn EVENTSTREAMS_TARGET_CRN] [--topic TOPIC]( [--api-key ( EVENTSTREAMS_API_KEY | @EVENTSTREAMS_API_KEY_FILE )]))] [--output FORMAT]
+```text
+ibmcloud atracker target update --target TARGET [--name TARGET_NAME] [ [--file EVENTSTREAMS_ENDPOINT_DEFINITION_JSON_FILE] | ( [--brokers BROKER_LIST] [--target-crn EVENTSTREAMS_TARGET_CRN] [--topic TOPIC]( [--api-key ( EVENTSTREAMS_API_KEY | @EVENTSTREAMS_API_KEY_FILE )] | [--service-to-service-enabled ( TRUE | FALSE )]))] [--output FORMAT]
 ```
 {: pre}
 
@@ -590,6 +593,9 @@ ibmcloud atracker target update --target TARGET [--name TARGET_NAME] [ [--file E
 
 `--api-key EVENTSTREAMS_API_KEY` | `@EVENTSTREAMS_API_KEY_FILE`
 :   The password value found in the {{site.data.keyword.messagehub}} service credential. This is the IAM API key.
+
+`--service-to-service-enabled`
+:   Determines if {{site.data.keyword.atracker_full_notm}} has service to service authentication enabled. Set this flag to `true` if service to service is enabled and do not supply an apikey.
 
 `--output FORMAT`
 :   Currently supported format is JSON. If specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.
@@ -781,4 +787,3 @@ ibmcloud atracker setting update [--metadata-region-primary REGION] [--metadata-
 
  `help` | `--help` | `-h`
 :   List options available for the command.
-
