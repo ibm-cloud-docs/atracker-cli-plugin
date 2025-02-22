@@ -1,0 +1,45 @@
+{
+  "version": 2,
+  "title": "IBM Cloud Activity Tracker Event Routing",
+  "introduction": "Use IBM Cloud Activity Tracker Event Routing to configure how to route auditing events, both global and location-based event data, in your IBM Cloud. Auditing events are critical data for security operations and a key element for meeting compliance requirements. Control of the storage location is critical to building enterprise-grade solutions on the IBM Cloud.",
+  "section_topics": {
+    "links": [
+      {
+        "title": "Getting started with IBM Cloud Activity Tracker Event Routing",
+        "href": "/docs/atracker?topic=atracker-getting-started"
+      },
+      {
+        "title": "About IBM Cloud Activity Tracker Event Routing",
+        "href": "/docs/atracker?topic=atracker-about"
+      },
+      {
+        "title": "Managing access with IAM",
+        "href": "/docs/atracker?topic=atracker-iam"
+      },
+      {
+        "title": "Auditing events for IBM Cloud Activity Tracker Event Routing",
+        "href": "/docs/atracker?topic=atracker-at_events"
+      },
+      {
+        "title": "Platform metrics for IBM Cloud Activity Tracker Event Routing",
+        "href": "/docs/atracker?topic=atracker-monitoring_metrics"
+      },
+      {
+        "title": "Understanding your responsibilities when using IBM Cloud Activity Tracker Event Routing",
+        "href": "/docs/atracker?topic=atracker-shared-responsibilities"
+      },
+      {
+        "title": "Frequently asked questions (FAQ)",
+        "href": "/docs/atracker?topic=atracker-faq"
+      }
+    ]
+  },
+  "section_devtools": {
+    "api": "/apidocs/atracker",
+    "cli": "/docs/atracker-cli-plugin?topic=atracker-cli-plugin-atracker-v2-cli",
+    "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/atracker_route"
+  },
+  "section_updates": {
+    "view_more": "/docs/atracker?topic=atracker-activity-tracker-release-notes"
+  }
+}
