@@ -5,7 +5,6 @@ toc:
     audience: service
     href: /docs/atracker-cli-plugin?topic=atracker-cli-plugin-atracker-cli-overview
     console-page: /observe/activitytracker
-    product-page: https://www.ibm.com/cloud/activity-tracker
     path: atracker-cli-plugin
     label: IBM Cloud Activity Tracker Event Routing CLI
   entries:
