@@ -2,7 +2,7 @@
 
 copyright:
   years:  2021, 2025
-lastupdated: "2025-02-22"
+lastupdated: "2025-04-09"
 
 subcollection: atracker-cli-plugin
 
@@ -18,8 +18,7 @@ keywords:
 The {{site.data.keyword.cloud}} command-line interface (CLI) provides extra capabilities for service offerings. This information describes how you can use the CLI to define and manage settings for your {{site.data.keyword.atracker_full}} instance using the CLI.
 {: shortdesc}
 
-This information applies only if you use an {{site.data.keyword.at_full}} [Event Routing offering](/docs/atracker?topic=atracker-getting-started). See the [command line references for {{site.data.keyword.at_full}} hosted event search](/docs/activity-tracker-cli-plugin?topic=activity-tracker-cli-plugin-activity-tracker-cli) for the CLI for that offering.
-{: important}
+
 
 ## Prerequisites
 {: #atracker-v2-cli-prereq}
@@ -268,53 +267,7 @@ Use this command to create a {{site.data.keyword.cos_full_notm}} target to be us
 `help` | `--help` | `-h`
 :   List options available for the command.
 
-## `ibmcloud atracker target create` ({{site.data.keyword.at_full_notm}} hosted event search)
-{: #target-create-v2-cli-at}
 
-Use this command to create an {{site.data.keyword.at_full_notm}} hosted event search offering target to be used to configure a destination for activity events.
-
-```sh
-ibmcloud atracker target create --name TARGET_NAME --type TARGET_TYPE ( [--file LOGDNA_ENDPOINT_DEFINITION_JSON_FILE] | ( [--target-crn LOGDNA_TARGET_CRN] [--ingestion-key LOGDNA_INGESTION_KEY] ) ) [--region REGION] [--output FORMAT]
-```
-{: pre}
-
-### Command options
-{: #target-create-v2-options-at}
-
-`--region REGION` | `-r REGION`
-:   Name of the region that determines the {{site.data.keyword.atracker_full_notm}} API endpoint for the request, for example, `us-south` or `eu-gb`. If not specified, the region logged into, or targeted, will be used.
-
-`--name TARGET_NAME`
-:   The name to be given to the target.
-
-    Do not include any personal identifying information (PII) in any resource names.
-    {: important}
-
-`--type TARGET_TYPE`
-:   Set the `TARGET_TYPE` to `logdna` for an {{site.data.keyword.at_full_notm}} hosted event search offering target.
-
-`--file @LOGDNA_ENDPOINT_DEFINITION_JSON_FILE`
-:   A file containing an endpoint definition in the following format:
-
-    ```json
-    {
-      "target_crn": "yyyyy",
-      "ingestion_key": "xxxxxx"
-    }
-    ```
-    {: codeblock}
-
-`--target-crn LOGDNA_TARGET_CRN`
-:   The CRN of the {{site.data.keyword.at_full_notm}} hosted event search offering instance.
-
-`--ingestion-key LOGDNA_INGESTION_KEY`
-:   `LOGDNA_INGESTION_KEY` is the ingestion key that will be used to gain access to the {{site.data.keyword.at_full_notm}} instance.
-
-`--output FORMAT`
-:   Currently support format is JSON. If specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.
-
-`help` | `--help` | `-h`
-:   List options available for the command.
 
 ## `ibmcloud atracker target create` (Event Streams)
 {: #target-create-cli-ies}
@@ -502,50 +455,7 @@ ibmcloud atracker target update --target TARGET [--name TARGET_NAME] [ [--file C
 `help` | `--help` | `-h`
 :   List options available for the command.
 
-## `ibmcloud atracker target update` ({{site.data.keyword.at_full_notm}} hosted event search)
-{: #target-update-v2-cli-at}
 
-Use this command to update an {{site.data.keyword.at_full_notm}} hosted event search offering target to be used to configure a destination for activity events.
-
-```sh
-ibmcloud atracker target update --target TARGET [--name TARGET_NAME] ( --file @LOGDNA_ENDPOINT_DEFINITION_JSON_FILE ) | (--target-crn LOGDNA_TARGET_CRN --ingestion-key LOGDNA_INGESTION_KEY )  [--output FORMAT]
-```
-{: pre}
-
-### Command options
-{: #target-update-v2-options-at}
-
-`--target TARGET`
-:   The ID or current target name.
-
-`--name TARGET_NAME`
-:   The name to be given to the target.
-
-    Do not include any personal identifying information (PII) in any resource names.
-    {: important}
-
-`--file @LOGDNA_ENDPOINT_DEFINITION_JSON_FILE`
-:   A file containing an endpoint definition in the following format:
-
-    ```json
-    {
-      "target_crn": "yyyyy",
-      "ingestion_key": "xxxxxx"
-    }
-    ```
-    {: codeblock}
-
-`--target-crn LOGDNA_TARGET_CRN`
-:   The CRN of the {{site.data.keyword.at_full_notm}} hosted event search offering instance.
-
-`--ingestion-key LOGDNA_INGESTION_KEY`
-:   `LOGDNA_INGESTION_KEY` is the ingestion key for the {{site.data.keyword.at_full_notm}} instance.
-
-`--output FORMAT`
-:   Currently support format is JSON. If specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.
-
-`help` | `--help` | `-h`
-:   List options available for the command.
 
 ## `ibmcloud atracker target update` (Event Streams)
 {: #target-update-cli-ies}
